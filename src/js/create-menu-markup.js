@@ -6,6 +6,7 @@ const menuListEl = document.querySelector('.js-menu');
 const cardsMarkUp = creatMarkUpMenuCard(menu);
 menuListEl.insertAdjacentHTML('beforeend', cardsMarkUp);
 
+//Створення розмітки карточки
 function creatMarkUpMenuCard(menu) {
   return menu.map(menuCardTmp).join('');
 }
