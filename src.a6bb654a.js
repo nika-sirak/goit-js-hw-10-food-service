@@ -15,4 +15,4 @@ var e="theme",t={LIGHT:"light-theme",DARK:"dark-theme"},o=document.querySelector
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./styles.css"),require("./js/create-menu-markup.js"),require("./js/switch-theme.js");
 },{"./styles.css":"Tnu0","./js/create-menu-markup.js":"WfQU","./js/switch-theme.js":"pE8F"}]},{},["Focm"], null)
-//# sourceMappingURL=/parcel-project-template/src.a9f7d3a9.js.map
+//# sourceMappingURL=/goit-js-hw-10-food-service/src.a6bb654a.js.map
