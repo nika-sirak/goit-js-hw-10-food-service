@@ -12,15 +12,11 @@ reloadPage();
 themeSwitchEl.addEventListener('click', onCheckboxClick);
 
 function onCheckboxClick(evt) {
-  console.log(evt.target);
-
   if (document.body.classList.contains(Theme.LIGHT)) {
-    document.body.classList.toggle(Theme.DARK);
-    document.body.classList.remove(Theme.LIGHT);
+    addClassTheme(Theme.LIGHT, Theme.DARK);
     localStorage.setItem(STORAGE_KEY, document.body.classList.value);
   } else {
-    document.body.classList.remove(Theme.DARK);
-    document.body.classList.add(Theme.LIGHT);
+    addClassTheme(Theme.DARK, Theme.LIGHT);
     localStorage.setItem(STORAGE_KEY, document.body.classList.value);
   }
 }
@@ -28,10 +24,17 @@ function onCheckboxClick(evt) {
 // Зберігає тему
 function reloadPage() {
   const savedTheme = localStorage.getItem(STORAGE_KEY);
-  if (savedTheme === Theme.DARK) {
-    document.body.classList.add(Theme.DARK);
-    themeSwitchEl.checked = true;
-  } else {
-    document.body.classList.add(Theme.LIGHT);
+
+  if (savedTheme === Theme.DARK || savedTheme === Theme.LIGHT) {
+    document.body.classList.add(savedTheme);
   }
+
+  if (savedTheme === Theme.DARK) {
+    themeSwitchEl.checked = true;
+  }
+}
+
+function addClassTheme(light, dark) {
+  document.body.classList.add(dark);
+  document.body.classList.remove(light);
 }
