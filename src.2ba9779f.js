@@ -11,8 +11,8 @@ module.exports=[{id:"XWaQXcbk0",name:"Картофель, запеченный �
 },{}],"WfQU":[function(require,module,exports) {
 "use strict";var e=u(require("../templates/menu-card.hbs")),r=u(require("../menu.json"));function u(e){return e&&e.__esModule?e:{default:e}}var n=document.querySelector(".js-menu"),t=a(r.default);function a(r){return r.map(e.default).join("")}n.insertAdjacentHTML("beforeend",t);
 },{"../templates/menu-card.hbs":"IS2B","../menu.json":"mA8c"}],"pE8F":[function(require,module,exports) {
-var e="theme",t={LIGHT:"light-theme",DARK:"dark-theme"},o=document.querySelector(".theme-switch__toggle");function s(o){console.log(o.target),document.body.classList.contains(t.LIGHT)?(document.body.classList.toggle(t.DARK),document.body.classList.remove(t.LIGHT),localStorage.setItem(e,document.body.classList.value)):(document.body.classList.remove(t.DARK),document.body.classList.add(t.LIGHT),localStorage.setItem(e,document.body.classList.value))}function c(){localStorage.getItem(e)===t.DARK?(document.body.classList.add(t.DARK),o.checked=!0):document.body.classList.add(t.LIGHT)}c(),o.addEventListener("click",s);
+var e="theme",t={LIGHT:"light-theme",DARK:"dark-theme"},c=document.querySelector(".theme-switch__toggle");function o(c){document.body.classList.contains(t.LIGHT)?(a(t.LIGHT,t.DARK),localStorage.setItem(e,document.body.classList.value)):(a(t.DARK,t.LIGHT),localStorage.setItem(e,document.body.classList.value))}function s(){var o=localStorage.getItem(e);o!==t.DARK&&o!==t.LIGHT||document.body.classList.add(o),o===t.DARK&&(c.checked=!0)}function a(e,t){document.body.classList.add(t),document.body.classList.remove(e)}s(),c.addEventListener("click",o);
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./styles.css"),require("./js/create-menu-markup.js"),require("./js/switch-theme.js");
 },{"./styles.css":"Tnu0","./js/create-menu-markup.js":"WfQU","./js/switch-theme.js":"pE8F"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-10-food-service/src.a6bb654a.js.map
+//# sourceMappingURL=/goit-js-hw-10-food-service/src.2ba9779f.js.map
